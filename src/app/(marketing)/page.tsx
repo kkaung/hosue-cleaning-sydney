@@ -20,7 +20,7 @@ export default function Page() {
             <Content />
             <OrganizationJsonLd
                 useAppDir
-                id={absoluteUrl('')}
+                id={absoluteUrl('/')}
                 name={siteConfig.name}
                 description={siteConfig.description}
                 legalName={siteConfig.name}
@@ -32,6 +32,7 @@ export default function Page() {
                     siteConfig.links.instagram,
                     siteConfig.links.twitter,
                     siteConfig.links.youtube,
+                    siteConfig.links.pinterest,
                 ]}
                 address={{
                     streetAddress: '101/ 761 - 763 George St Haymarket',

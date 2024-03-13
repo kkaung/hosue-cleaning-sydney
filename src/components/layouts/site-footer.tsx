@@ -30,8 +30,9 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                             <span className="font-bold">{siteConfig.logo}</span>
                         </Link>
                         <p className="my-4 max-w-xs text-xs md:text-sm">
-                            You move out, we handle the meticulous cleanup with
-                            care.
+                            We transform Sydney homes from chaotic havens into
+                            sparkling sanctuaries, all while respecting the
+                            environment and your peace of mind.
                         </p>
                         <div className="flex flex-col mt-2 space-y-2">
                             <div className={cn('cursor-pointer text-sm')}>

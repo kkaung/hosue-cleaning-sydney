@@ -21,19 +21,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     const allSuburbs = locations.flatMap(location => location.items);
 
-    const bondCleaningRoutes: any[] = [];
+    const routes = [
+        '',
+        '/deep-cleaning',
+        '/regular-cleaning',
+        '/end-of-lease-cleaning',
+        '/office-cleaning',
+        '/oven-cleaning',
+        '/carpet-cleaning',
+        '/window-cleaning',
+        '/after-builder-cleaning',
 
-    locations.forEach(city => {
-        const cityName = city.title.toLowerCase();
-        const cityRoutes = city.items.map(suburb => ({
-            url: absoluteUrl(`/bond-cleaning-${cityName}/${suburb.slug}`),
-            lastModified: new Date().toISOString(),
-        }));
-
-        bondCleaningRoutes.push(...cityRoutes);
-    });
-
-    const routes = ['', '/pricing'].map(route => ({
+        '/pricing',
+    ].map(route => ({
         url: absoluteUrl(route),
         lastModified: new Date().toISOString(),
     }));

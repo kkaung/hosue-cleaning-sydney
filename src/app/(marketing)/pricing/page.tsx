@@ -15,15 +15,15 @@ import {
     TableHeader,
     TableRow,
 } from '@/components/ui/table';
-import { siteConfig } from '@/configs/site';
+import { formatDate } from '@/lib/utils';
 import { Metadata } from 'next';
-import Link from 'next/link';
 import React from 'react';
+import FAQs from '../_components/faqs';
 
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-    title: 'End Of Lease - Bond Cleaning Pricin ',
+    title: 'House Cleaning Pricing Sydney',
     description:
         'Check our detailed cleaning pricing list. Professional & reliable service, 100% satisfaction guarantee. Book online in 60 seconds.',
 };
@@ -71,24 +71,15 @@ export default function Page() {
             />
             <PageHeader className="text-center">
                 <PageHeaderHeading>
-                    End Of Lease Cleaning Pricing
+                    House Cleaning Pricing Sydney
                 </PageHeaderHeading>
                 <PageHeaderDescription className="mx-auto mt-6">
-                    You might recognise it as
-                    <Link href="/" className="underline mx-1">
-                        bond cleaning
-                    </Link>
-                    ,
-                    <Link href="/" className="underline mx-1">
-                        end of lease cleaning
-                    </Link>
-                    , or
-                    <Link href="/" className="underline mx-1">
-                        vacate cleaning
-                    </Link>
-                    . It’s all one and the same for us. See below a detailed
-                    list of our end of cleaning service prices. At RZ Cleaning,
-                    our prices are super affordable and will not break the bank.
+                    <time
+                        dateTime={'2024-01-04T00:00:00.000Z'}
+                        className="block text-sm text-muted-foreground mb-2"
+                    >
+                        Updated on {formatDate('2024-01-04T00:00:00.000Z')}
+                    </time>
                 </PageHeaderDescription>
             </PageHeader>
             <section className="broder max-w-xl mx-auto w-full">
@@ -114,6 +105,7 @@ export default function Page() {
                     </TableBody>
                 </Table>
             </section>
+            <FAQs />
         </Shell>
     );
 }

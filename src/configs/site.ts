@@ -4,16 +4,19 @@ import type { FooterItem, MainNavItem } from '@/types';
 export type SiteConfig = typeof siteConfig;
 
 const links = {
-    facebook: 'https://www.facebook.com/',
-    instagram: 'https://instagram.com/',
-    twitter: 'https://twitter.com/',
-    pinterest: 'https://www.pinterest.com.au/',
-    linkin: 'https://www.linkedin.com/company/',
-    youtube: 'https://www.youtube.com/channel',
+    facebook:
+        'https://www.facebook.com/people/House-Cleaning-Service-Sydney/61556722978102/',
+    instagram: 'https://instagram.com/housecleaningservicesydney',
+    twitter: 'https://twitter.com/cleaningsyd',
+    pinterest: 'https://www.pinterest.com.au/houseclenaingservicesydney/',
+    linkin: 'https://www.linkedin.com/company/house-cleaner-sydney',
+    youtube: 'https://www.youtube.com/@HouseCleaningServiceSydn-dl2kv',
     googlemap: '',
 
     buynsw: '',
     yelp: '',
+    trustpilot:
+        'https://www.trustpilot.com/review/housecleaningservicesydney.com.au',
 };
 
 export const siteConfig = {
@@ -25,8 +28,41 @@ export const siteConfig = {
     ogImage: 'https://housecleaningservicesydney.com.au/opengraph-image.png',
     mainNav: [
         {
-            title: 'Where We Clean',
-            items: [],
+            title: 'Services',
+            items: [
+                {
+                    title: 'Deep Cleaning',
+                    href: '/deep-cleaning',
+                },
+                {
+                    title: 'Regular Cleaning',
+                    href: '/regular-cleaning',
+                },
+                {
+                    title: 'End Of Lease Cleaning',
+                    href: '/end-of-lease-cleaning',
+                },
+                {
+                    title: 'Office Cleaning',
+                    href: '/office-cleaning',
+                },
+                {
+                    title: 'Oven Cleaning',
+                    href: '/oven-cleaning',
+                },
+                {
+                    title: 'Carpet Cleaning',
+                    href: '/carpet-cleaning',
+                },
+                {
+                    title: 'Window Cleaning',
+                    href: '/window-cleaning',
+                },
+                {
+                    title: 'After Builder Cleaning',
+                    href: '/after-builder-cleaning',
+                },
+            ],
         },
         {
             title: 'Pricing',
@@ -36,13 +72,50 @@ export const siteConfig = {
     links,
     footerNav: [
         {
+            title: 'Services',
+            items: [
+                {
+                    title: 'Deep Cleaning',
+                    href: '/deep-cleaning',
+                },
+                {
+                    title: 'Regular Cleaning',
+                    href: '/regular-cleaning',
+                },
+                {
+                    title: 'End Of Lease Cleaning',
+                    href: '/end-of-lease-cleaning',
+                },
+                {
+                    title: 'Office Cleaning',
+                    href: '/office-cleaning',
+                },
+                {
+                    title: 'Oven Cleaning',
+                    href: '/oven-cleaning',
+                },
+                {
+                    title: 'Carpet Cleaning',
+                    href: '/carpet-cleaning',
+                },
+                {
+                    title: 'Window Cleaning',
+                    href: '/window-cleaning',
+                },
+                {
+                    title: 'After Builder Cleaning',
+                    href: '/after-builder-cleaning',
+                },
+            ],
+        },
+        {
             title: 'Useful Links',
             items: [
                 { title: 'Contact Us', href: '/contact' },
                 { title: 'About Us', href: '/about' },
                 { title: 'Blog', href: '/blog' },
                 { title: 'Pricing', href: '/pricing' },
-                { title: 'Checklist', href: '/bond-cleaning-checklist' },
+                { title: 'Checklist', href: '/checklist' },
                 { title: 'FAQs', href: '/frequently-asked-questions' },
                 { title: 'Privacy Policy', href: '/privacy' },
                 { title: 'Terms And Conditions', href: '/terms' },

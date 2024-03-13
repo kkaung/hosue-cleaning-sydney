@@ -7,7 +7,6 @@ import Features from './features';
 import LatestBlog from './latest-blog';
 import Commitment from './commitment';
 import About from './about';
-import Checklist from './checklist';
 
 interface ContentProps extends HTMLAttributes<HTMLElement> {}
 

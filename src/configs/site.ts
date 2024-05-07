@@ -20,10 +20,10 @@ const links = {
 };
 
 export const siteConfig = {
-    logo: 'SydneyCleaning',
-    name: 'SydneyCleaning',
-    title: `Sydney's Premium House Cleaning Serivce`,
-    description: '',
+    logo: 'House Cleaning Sydney',
+    name: 'House Cleaning Sydney',
+    title: `House Cleaning Sydney`,
+    description: `Our top-rated cleaning services come with a 200% satisfaction guarantee. We deliver sparkling results you'll love with our professional cleaners. Book online in 60 seconds!`,
     url: 'https://housecleaningservicesydney.com.au',
     ogImage: 'https://housecleaningservicesydney.com.au/opengraph-image.png',
     mainNav: [
@@ -125,12 +125,12 @@ export const siteConfig = {
     business: {
         email: 'contact@housecleaningservicesydney.com.au',
         phone: '1302 245 417',
-        address: '401/249 George St, 2017 NSW',
+        address: '10/75 King St, Sydney NSW 2000',
         openingHour: 'Mon – Sun: 9:00 AM – 5:00 PM',
     },
     rating: {
-        ratingValue: '4.9',
-        ratingCount: '727',
+        ratingValue: 4.9,
+        ratingCount: 1027,
     },
 };
 

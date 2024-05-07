@@ -24,29 +24,6 @@ var computedFields = {
     }
   }
 };
-var Author = defineDocumentType(() => ({
-  name: "Author",
-  filePathPattern: `authors/**/*.mdx`,
-  contentType: "mdx",
-  fields: {
-    title: {
-      type: "string",
-      required: true
-    },
-    description: {
-      type: "string"
-    },
-    avatar: {
-      type: "string",
-      required: true
-    },
-    linkin: {
-      type: "string",
-      required: true
-    }
-  },
-  computedFields
-}));
 var Page = defineDocumentType(() => ({
   name: "Page",
   filePathPattern: `pages/**/*.mdx`,
@@ -58,6 +35,52 @@ var Page = defineDocumentType(() => ({
     },
     description: {
       type: "string"
+    }
+  },
+  computedFields
+}));
+var Service = defineDocumentType(() => ({
+  name: "Service",
+  filePathPattern: `services/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true
+    },
+    description: {
+      type: "string"
+    }
+  },
+  computedFields
+}));
+var Product = defineDocumentType(() => ({
+  name: "Product",
+  filePathPattern: `products/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true
+    },
+    description: {
+      type: "string"
+    },
+    price: {
+      type: "number",
+      required: true
+    },
+    image: {
+      type: "string",
+      required: true
+    },
+    ratingValue: {
+      type: "string",
+      required: true
+    },
+    ratingCount: {
+      type: "number",
+      required: true
     }
   },
   computedFields
@@ -97,7 +120,7 @@ var Post = defineDocumentType(() => ({
 var contentlayer_config_default = makeSource({
   contentDirPath: "./src/content",
   disableImportAliasWarning: true,
-  documentTypes: [Page, Post, Author],
+  documentTypes: [Page, Post, Service, Product],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
@@ -155,9 +178,10 @@ var contentlayer_config_default = makeSource({
   }
 });
 export {
-  Author,
   Page,
   Post,
+  Product,
+  Service,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-7LQPHSVS.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-F25MC2UZ.mjs.map

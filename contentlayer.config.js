@@ -26,30 +26,6 @@ const computedFields = {
     },
 };
 
-export const Author = defineDocumentType(() => ({
-    name: 'Author',
-    filePathPattern: `authors/**/*.mdx`,
-    contentType: 'mdx',
-    fields: {
-        title: {
-            type: 'string',
-            required: true,
-        },
-        description: {
-            type: 'string',
-        },
-        avatar: {
-            type: 'string',
-            required: true,
-        },
-        linkin: {
-            type: 'string',
-            required: true,
-        },
-    },
-    computedFields,
-}));
-
 export const Page = defineDocumentType(() => ({
     name: 'Page',
     filePathPattern: `pages/**/*.mdx`,
@@ -61,6 +37,54 @@ export const Page = defineDocumentType(() => ({
         },
         description: {
             type: 'string',
+        },
+    },
+    computedFields,
+}));
+
+export const Service = defineDocumentType(() => ({
+    name: 'Service',
+    filePathPattern: `services/**/*.mdx`,
+    contentType: 'mdx',
+    fields: {
+        title: {
+            type: 'string',
+            required: true,
+        },
+        description: {
+            type: 'string',
+        },
+    },
+    computedFields,
+}));
+
+export const Product = defineDocumentType(() => ({
+    name: 'Product',
+    filePathPattern: `products/**/*.mdx`,
+    contentType: 'mdx',
+    fields: {
+        title: {
+            type: 'string',
+            required: true,
+        },
+        description: {
+            type: 'string',
+        },
+        price: {
+            type: 'number',
+            required: true,
+        },
+        image: {
+            type: 'string',
+            required: true,
+        },
+        ratingValue: {
+            type: 'string',
+            required: true,
+        },
+        ratingCount: {
+            type: 'number',
+            required: true,
         },
     },
     computedFields,
@@ -102,7 +126,7 @@ export const Post = defineDocumentType(() => ({
 export default makeSource({
     contentDirPath: './src/content',
     disableImportAliasWarning: true,
-    documentTypes: [Page, Post, Author],
+    documentTypes: [Page, Post, Service, Product],
     mdx: {
         remarkPlugins: [remarkGfm],
         rehypePlugins: [

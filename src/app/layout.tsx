@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     keywords: [],
     authors: [],
-    creator: 'rzcleaning_au',
+    creator: 'cleaningsyd',
     openGraph: {
         type: 'website',
         locale: 'en_US',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         title: siteConfig.name,
         description: siteConfig.description,
         images: [`${siteConfig.url}/og.jpg`],
-        creator: '@rzcleaning_au',
+        creator: '@cleaningsyd',
     },
     icons: {
         icon: '/favicon.ico',

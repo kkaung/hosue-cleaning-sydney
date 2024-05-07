@@ -29,11 +29,6 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                         >
                             <span className="font-bold">{siteConfig.logo}</span>
                         </Link>
-                        <p className="my-4 max-w-xs text-xs md:text-sm">
-                            We transform Sydney homes from chaotic havens into
-                            sparkling sanctuaries, all while respecting the
-                            environment and your peace of mind.
-                        </p>
                         <div className="flex flex-col mt-2 space-y-2">
                             <div className={cn('cursor-pointer text-sm')}>
                                 <Icons.mail
@@ -81,19 +76,18 @@ export default async function SiteFooter({ ...props }: SiteFooterProps) {
                                 <div className="text-base font-medium">
                                     {item.title}
                                 </div>
-                                <ul className="space-y-2">
+                                <nav className="space-y-2">
                                     {item.items.map(link => (
-                                        <li key={link.title}>
-                                            <Link
-                                                href={link.href}
-                                                className="text-sm transition-colors line-clamp-1"
-                                                title={link.title}
-                                            >
-                                                {link.title}
-                                            </Link>
-                                        </li>
+                                        <Link
+                                            key={link.title}
+                                            href={link.href}
+                                            className="text-sm transition-colors line-clamp-1"
+                                            title={link.title}
+                                        >
+                                            {link.title}
+                                        </Link>
                                     ))}
-                                </ul>
+                                </nav>
                             </div>
                         ))}
                     </section>

@@ -5,6 +5,7 @@ import { absoluteUrl, cn, truncate } from '@/lib/utils';
 import Dot from '@/components/dot';
 import { BreadcrumbJsonLd } from 'next-seo';
 import { Icons } from '@/components/icons';
+import { siteConfig } from '@/configs/site';
 
 interface BreadcrumbsProps extends React.HTMLAttributes<HTMLElement> {
     segments: {
@@ -54,14 +55,8 @@ export function Breadcrumbs({
                     return (
                         <React.Fragment key={segment.href}>
                             {isFirstSegment ? (
-                                <Link
-                                    href="/"
-                                    title="End Of Lease Cleaning - Bond Cleaning - Sydney"
-                                >
-                                    <Icons.home
-                                        aria-hidden
-                                        className="w-4 h-4"
-                                    />
+                                <Link href="/" title={siteConfig.title}>
+                                    {siteConfig.title}
                                 </Link>
                             ) : (
                                 <Link

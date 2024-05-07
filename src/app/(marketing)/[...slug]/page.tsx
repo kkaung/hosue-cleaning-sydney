@@ -9,6 +9,7 @@ import { headingVariants } from '@/components/page-header';
 import { Shell } from '@/components/shell';
 import { MdxPager } from '@/components/pagers/mdx-pager';
 import { getPathname } from '@/lib/next';
+import { Breadcrumbs } from '@/components/pagers/breadcrumbs';
 
 interface PageProps {
     params: {
@@ -44,7 +45,7 @@ export async function generateMetadata({
     ogUrl.searchParams.set('mode', 'light');
 
     return {
-        title: page.title,
+        title: `${page.title} - ${siteConfig.title}`,
         description: page.description,
         alternates: {
             canonical: pathname,
@@ -95,6 +96,14 @@ export default async function PagePage({ params }: PageProps) {
 
     return (
         <Shell variant="markdown">
+            <Breadcrumbs
+                segments={[
+                    { title: 'Home', href: '/' },
+                    { title: page.title, href: page.slugAsParams },
+                ]}
+                className="mb-8"
+                dottable={false}
+            />
             <div className="space-y-4">
                 <h1 className={cn(headingVariants({}))}>{page.title}</h1>
                 {page.description && (
